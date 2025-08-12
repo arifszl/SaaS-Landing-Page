@@ -3,7 +3,7 @@ import { Link as LinkScroll } from "react-scroll";
 import clsx from "clsx";
 const NavLink = ({ title }) => (
 	<LinkScroll
-		className="base-bold text-p4 uppercase transition-colors duration-500 cursor-pointer hover:text-amber-400"
+		className="base-bold text-p4 uppercase transition-colors duration-500 cursor-auto hover:text-amber-400"
 		smooth={true}
 		max-lg:my-4
 		max-lg:h5
@@ -16,9 +16,14 @@ const Header = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	return (
 		<header className="fixed top-0 left-0 w-full z-50 w-full py-10">
-			<div className="container flex h-15 items-center max-lg:px-5">
+			<div className="container flex h-15 items-center max-lg:px-6">
 				<a className="lg:hidden flex-1 cursor-pointer z-2" href="">
-					<img src="/images/sociogramm.png" alt="Logo" width={90} height={40} />
+					<img
+						src="/images/backimg.png"
+						alt="Logo"
+						width={125}
+						height={60}
+					/>
 				</a>
 				<div
 					className={clsx(
@@ -45,20 +50,32 @@ const Header = () => {
 										)}
 									>
 										<img
-											src="/images/sociogramm.png"
+											src="/images/backimg.png"
 											alt="Logo"
 											width={90}
 											height={35}
 										/>
 									</LinkScroll>
 								</li>
-								<li className="nav-li">
+								<li className="nav-li ">
 									<NavLink title="FAQ" />
 									<div className="dot" />
 									<NavLink title="Downlaod" />
 								</li>
 							</ul>
 						</nav>
+						<div className="lg:hidden block absolute top-1/2 left-0 w-[960px] h-[380px] translate-x-[-290px] -translate-y-1/2 rotate-90">
+							<img
+								src="/images/bg-outlines.svg"
+								alt=""
+								className="relative z-2"
+							/>
+							<img
+								src="/images/bg-outlines-fill.png"
+								alt=""
+								className="absolute inset-0 mix-blend-soft-light opacity-5"
+							/>
+						</div>
 					</div>
 				</div>
 				<button
