@@ -15,8 +15,8 @@ const NavLink = ({ title }) => (
 const Header = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	return (
-		<header className="fixed top-0 left-0 w-full z-50 w-full py-10">
-			<div className="container flex h-15 items-center max-lg:px-6">
+		<header className="fixed top-0 left-0 w-full z-50 py-10 m-1 md:px-8">
+			<div className="container flex h-15 items-center  max-lg:px-6">
 				<a className="lg:hidden flex-1 cursor-pointer z-2" href="">
 					<img
 						src="/images/backimg.png"
@@ -31,7 +31,7 @@ const Header = () => {
 						isOpen ? "max-lg:opacity-100" : "max-lg:pointer-events-none "
 					)}
 				>
-					<div className="max-lg:relative max-lg:flex max-lg:flex-col max-lg:min-h-screen max-lg:p-6 max-lg:overflow-hidden sideba-before max-md:px-4 ">
+					<div className="max-lg:relative max-lg:flex max-lg:flex-col max-lg:min-h-screen max-lg:p-6 max-lg:overflow-hidden sideba-before max-md:px-4 px-12">
 						<nav className="max-lg:relative max-lg:z-2 max-lg:my-auto">
 							<ul className="flex max-lg:block max-lg:px-12">
 								<li className="nav-li">
@@ -52,7 +52,7 @@ const Header = () => {
 										<img
 											src="/images/backimg.png"
 											alt="Logo"
-											width={90}
+											width={70}
 											height={35}
 										/>
 									</LinkScroll>
